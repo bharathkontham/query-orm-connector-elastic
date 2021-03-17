@@ -1,0 +1,38 @@
+{
+  "name": "search-orm-connector-elastic",
+  "version": "1.0.0",
+  "description": "elasticsearch connector for search-orm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bharathkontham/search-orm-connector-elastic.git"
+  },
+  "keywords": [
+    "elasticsearch",
+    "search-orm",
+    "orm",
+    "loopback",
+    "odm"
+  ],
+  "author": {
+    "name": "Bharath Reddy Kontham",
+    "email": "bharath2211@gmail.com",
+    "url": "https://github.com/bharathkontham"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bharathkontham/search-orm-connector-elastic/issues"
+  },
+  "homepage": "https://github.com/bharathkontham/search-orm-connector-elastic#readme",
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "es7": "npm:@elastic/elasticsearch@^7.11.0"
+  }
+}
