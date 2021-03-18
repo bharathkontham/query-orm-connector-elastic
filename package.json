@@ -33,6 +33,7 @@
     "standard": "^16.0.3"
   },
   "dependencies": {
-    "es7": "npm:@elastic/elasticsearch@^7.11.0"
+    "es7": "npm:@elastic/elasticsearch@^7.11.0",
+    "ramda": "^0.27.1"
   }
 }
