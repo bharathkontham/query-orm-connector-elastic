@@ -1,7 +1,7 @@
 {
-  "name": "search-orm-connector-elastic",
+  "name": "query-orm-connector-elastic",
   "version": "1.0.0",
-  "description": "elasticsearch connector for search-orm",
+  "description": "elasticsearch connector for query-orm",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,11 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bharathkontham/search-orm-connector-elastic.git"
+    "url": "https://github.com/bharathkontham/query-orm-connector-elastic.git"
   },
   "keywords": [
     "elasticsearch",
-    "search-orm",
+    "query-orm",
+    "query",
+    "dsl",
     "orm",
     "loopback",
     "odm"
@@ -25,9 +27,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bharathkontham/search-orm-connector-elastic/issues"
+    "url": "https://github.com/bharathkontham/query-orm-connector-elastic/issues"
   },
-  "homepage": "https://github.com/bharathkontham/search-orm-connector-elastic#readme",
+  "homepage": "https://github.com/bharathkontham/query-orm-connector-elastic#readme",
   "devDependencies": {
     "eslint": "^7.21.0",
     "standard": "^16.0.3"
