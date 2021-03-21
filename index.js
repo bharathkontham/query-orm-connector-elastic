@@ -17,6 +17,21 @@ const {
   setup
 } = require('./lib/setup');
 
+const {
+  find,
+  findOne,
+  findById,
+  count
+} = require('./lib/search');
+
+const {
+  create,
+  updateById,
+  updateByQuery,
+  deleteById,
+  deleteByQuery
+} = require('./lib/write');
+
 class ESConnector {
   constructor (modelDefinition, dataSource) {
     this.modelDefinition = modelDefinition;
@@ -28,6 +43,11 @@ class ESConnector {
       'deleteById',
       'updateByQuery',
       'deleteByQuery'
+    ];
+    this.restAsInt = [
+      'find',
+      'findOne',
+      'findById'
     ];
     if (this.modelDefinition.id === undefined ||
       this.modelDefinition.id.property === undefined ||
@@ -55,46 +75,26 @@ ESConnector.prototype.buildWhere = buildWhere;
 ESConnector.prototype.buildNestedQueries = buildNestedQueries;
 ESConnector.prototype.buildDeepNestedQueries = buildDeepNestedQueries;
 
-ESConnector.prototype.find = async function (filter) {
-  return [];
-};
+ESConnector.prototype.find = find;
+ESConnector.prototype.findById = findById;
+ESConnector.prototype.findOne = findOne;
+ESConnector.prototype.count = count;
 
-ESConnector.prototype.findById = async function (id) {
-  return {};
-};
+ESConnector.prototype.create = create;
+ESConnector.prototype.updateById = updateById;
+ESConnector.prototype.updateByQuery = updateByQuery;
+ESConnector.prototype.deleteById = deleteById;
+ESConnector.prototype.deleteByQuery = deleteByQuery;
 
-ESConnector.prototype.findOne = async function (filter) {
-  return {};
-};
-
-ESConnector.prototype.create = async function (data) {
-  return {};
-};
-
-ESConnector.prototype.updateById = async function (id, data) {
-  return {};
-};
-
-ESConnector.prototype.updateByQuery = async function (where, data) {
-  return [];
-};
-
-ESConnector.prototype.deleteById = async function (id, data) {
-  return {
-    count: 0
-  };
-};
-
-ESConnector.prototype.deleteByQuery = async function (where, data) {
-  return {
-    count: 0
-  };
-};
-
-ESConnector.prototype.count = async function (where) {
-  return {
-    count: 0
-  };
+ESConnector.prototype.docToModel = function (doc, total = null, sort = null) {
+  const modelDoc = doc._source;
+  if (total) {
+    modelDoc._total = total;
+  }
+  if (sort) {
+    modelDoc._search_after = sort;
+  }
+  return modelDoc;
 };
 
 module.exports = ESConnector;

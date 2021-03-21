@@ -1,27 +1,21 @@
-# search-orm
+# search-orm-connector-elastic
 
-Loopback like ORM built to work with any node.js framework.
+Elasticsearch 7.x Connector for search-orm
 
 * [Filters](#filters)
-* [Relations](#relations)
-* [Connectors](#connectors)
 
 ## Filters
 
-### Base Filters
+### Query Filters
 
 ```javascript
 {
   "where": {},
   "limit": 100,
   "skip": 2, // offset
-  "search_after": [], // optional for pagination
+  "searchafter": [], // optional for pagination
   "order": [], // [] or ""
   "fields": [], // [] or ""
   "include": [], // [] or "" for relations
 }
 ```
-
-## Relations
-
-## Connectors
