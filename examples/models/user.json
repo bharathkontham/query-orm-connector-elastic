@@ -1,0 +1,45 @@
+{
+  "name": "User",
+  "plural": "users",
+  "validations": {},
+  "id": {
+    "property": "userId",
+    "generated": true
+  },
+  "schema": {
+    "type": "object",
+    "properties": {
+      "userId": {
+        "type": "string"
+      },
+      "username": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "firstname": {
+        "type": "string"
+      },
+      "lastname": {
+        "type": "string"
+      },
+      "created": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "updated": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "required": [
+      "firstname",
+      "lastname",
+      "userId",
+      "username",
+      "password"
+    ]
+  },
+  "relations": {}
+}
