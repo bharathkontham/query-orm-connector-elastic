@@ -94,6 +94,7 @@ ESConnector.prototype.docToModel = function (doc, total = null, sort = null) {
   if (sort) {
     modelDoc._search_after = sort;
   }
+  modelDoc[this.modelDefinition.id.property] = doc._id;
   return modelDoc;
 };
 
