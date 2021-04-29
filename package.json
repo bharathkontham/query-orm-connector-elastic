@@ -1,6 +1,6 @@
 {
   "name": "query-orm-connector-elastic",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "elasticsearch connector for query-orm",
   "main": "index.js",
   "scripts": {
